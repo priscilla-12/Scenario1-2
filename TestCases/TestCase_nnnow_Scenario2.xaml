@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_nnnow_Scenario" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_nnnow_Scenario" this:TestCase_nnnow_Scenario.Email="priscilla7845@gmail.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Name" Type="InArgument(x:String)" />
     <x:Property Name="PhoneNumber" Type="InArgument(x:String)" />
@@ -6,6 +6,7 @@
     <x:Property Name="str_SuiteId" Type="InArgument(x:String)" />
     <x:Property Name="int_TestId" Type="InArgument(x:String)" />
     <x:Property Name="int_repid" Type="InArgument(x:Int32)" />
+    <x:Property Name="Email" Type="InArgument(x:String)" />
   </x:Members>
   <this:TestCase_nnnow_Scenario.str_SuiteId>
     <InArgument x:TypeArguments="x:String" />
@@ -139,9 +140,9 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="[System.Environment.CurrentDirectory+&quot;\Reports&quot;]" ReportName="nnnow" isCreated="[int_repid]" />
-      <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[int_repid]" SuiteName="Verify nnnow Search Product" suiteId="[str_SuiteId]" />
-      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[int_repid]" SuiteId="[str_SuiteId]" TestName="TC-01_SearchProduct_nnnow" testId="[int_TestId]" />
+      <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="[System.Environment.CurrentDirectory+&quot;\Reports&quot;]" ReportName="nnnowScenario2" isCreated="[int_repid]" />
+      <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[int_repid]" SuiteName="Verify nnnow Login" suiteId="[str_SuiteId]" />
+      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[int_repid]" SuiteId="[str_SuiteId]" TestName="TC-02_NewUserLogin_nnnow" testId="[int_TestId]" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestFramework\SetUp.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TestFramework\SetUp.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -174,6 +175,9 @@
           <InArgument x:TypeArguments="x:String" x:Key="str_SuiteId">
             <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_SuiteId" />
           </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Email">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -183,7 +187,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_1" ReportId="[int_repid]" Status="Pass" StepDescription="Search Should be Successful" StepName="Verify Search was Successful" TakeScreenshot="True" TestId="[int_TestId]" />
+      <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_1" ReportId="[int_repid]" Status="Pass" StepDescription="Login Should be Successful" StepName="Verify New User Login was Successful" TakeScreenshot="True" TestId="[int_TestId]" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestFramework\TearDown.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="TestFramework\TearDown.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />

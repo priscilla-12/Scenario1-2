@@ -1,8 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_VerifySauceDemoLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="clr-namespace:ObjectRepoLibrary;assembly=ObjectRepoLibrary" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_VerifySauceDemoLogin" this:TestCase_VerifySauceDemoLogin.Product1="Sling bag" this:TestCase_VerifySauceDemoLogin.Quantity1="4" this:TestCase_VerifySauceDemoLogin.Product2="Duffle Bags" this:TestCase_VerifySauceDemoLogin.Quantity2="1" this:TestCase_VerifySauceDemoLogin.BagName1="CALVIN KLEIN JEANS" this:TestCase_VerifySauceDemoLogin.BagName2="FLYING MACHINE" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="bol_AddtoCart" Type="OutArgument(x:Boolean)" />
     <x:Property Name="ProductName" Type="InArgument(x:String)" />
     <x:Property Name="Quantity" Type="InArgument(x:String)" />
+    <x:Property Name="Product1" Type="InArgument(x:String)" />
+    <x:Property Name="Quantity1" Type="InArgument(x:String)" />
+    <x:Property Name="Product2" Type="InArgument(x:String)" />
+    <x:Property Name="Quantity2" Type="InArgument(x:String)" />
+    <x:Property Name="BagName1" Type="InArgument(x:String)" />
+    <x:Property Name="BagName2" Type="InArgument(x:String)" />
   </x:Members>
   <this:TestCase_VerifySauceDemoLogin.ProductName>
     <InArgument x:TypeArguments="x:String" />
@@ -13,7 +19,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>723.2,1664</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>501.6,1533.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestCase_VerifySauceDemoLogin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +121,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_VerifySauceDemoLogin" sap:VirtualizedContainerService.HintSize="512,1599.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_VerifySauceDemoLogin" sap:VirtualizedContainerService.HintSize="512,1468.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bol_AddtoCart" />
       <Variable x:TypeArguments="x:String" Name="str_SuiteId" />
@@ -133,16 +139,16 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="[System.Environment.CurrentDirectory+&quot;\Reports&quot;]" ReportName="nnnow" isCreated="[int_repid]" />
+      <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="[System.Environment.CurrentDirectory+&quot;\Reports&quot;]" ReportName="nnnowScenario1" isCreated="[int_repid]" />
       <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" ReportId="[int_repid]" SuiteName="Add to Cart" suiteId="[str_SuiteId]" />
-      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[int_repid]" SuiteId="[str_SuiteId]" TestName="TC-02_Product_AddtoCart" testId="[int_TestId]" />
+      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Low" ReportId="[int_repid]" SuiteId="[str_SuiteId]" TestName="TC-01_Product_AddtoCart" testId="[int_TestId]" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TestFramework\SetUp.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TestFramework\SetUp.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="449.6,356" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,9 +162,6 @@
           <InArgument x:TypeArguments="x:String" x:Key="Quantity">
             <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Quantity" />
           </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Product">
-            <Literal x:TypeArguments="x:String">Sling bag</Literal>
-          </InArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="Data1" />
           <InArgument x:TypeArguments="x:Int32" x:Key="int_repid">
             <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="int_repid" />
@@ -169,9 +172,27 @@
           <InArgument x:TypeArguments="x:String" x:Key="str_SuiteId">
             <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_SuiteId" />
           </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="DataRow" />
+          <InArgument x:TypeArguments="x:String" x:Key="Product1">
+            <Literal x:TypeArguments="x:String">Sling bag</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Product2">
+            <Literal x:TypeArguments="x:String">Duffle Bags</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Quantity1">
+            <Literal x:TypeArguments="x:String">4</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Quantity2">
+            <Literal x:TypeArguments="x:String">1</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="BagName1">
+            <Literal x:TypeArguments="x:String">CALVIN KLEIN JEANS</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="BagName2">
+            <Literal x:TypeArguments="x:String">FLYING MACHINE</Literal>
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <o:BC_VerifyLogin_OkButton DisplayName="BC Add to Cart" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="BC_VerifyLogin_OkButton_2" bol_LoginSuccess="[bol_AddtoCart]" />
     </Sequence>
     <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>

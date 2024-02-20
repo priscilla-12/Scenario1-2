@@ -15,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.12.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.162115984",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -77,10 +77,18 @@
       {
         "editingStatus": "Publishable",
         "testCaseId": "c53107b8-b1a8-4c6e-adc5-242352bd7610",
-        "dataVariationFilePath": ".variations\\TestData Scenario1_Sheet1.json",
+        "dataVariationFilePath": ".variations\\TestData Scenario1_Sheet1_1.json",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "TestCases\\TestCase_nnnow_Scenario1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "ef3d3b45-c13d-4728-9bcd-609891595bdc",
+        "dataVariationFilePath": ".variations\\TestData Scenario1_Sheet1.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TestCase_nnnow_Scenario11.xaml"
       }
     ],
     "saveToCloud": false

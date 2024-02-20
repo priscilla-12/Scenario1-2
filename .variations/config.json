@@ -5,11 +5,15 @@
       "dataVariationType": "File"
     },
     {
+      "filePath": ".variations\\TestData Scenario2_Sheet1.json",
+      "dataVariationType": "File"
+    },
+    {
       "filePath": ".variations\\TestData Scenario1_Sheet1.json",
       "dataVariationType": "File"
     },
     {
-      "filePath": ".variations\\TestData Scenario2_Sheet1.json",
+      "filePath": ".variations\\TestData Scenario1_Sheet1_1.json",
       "dataVariationType": "File"
     }
   ]
